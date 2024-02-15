@@ -40,7 +40,5 @@ const total = nums.myReduce((acc, curr, i, arr) => {
 }, 0);
 console.log(total);
 
-// map vs forEach => map returns new Array, forEach doesnt. 
+// map vs forEach => map returns new Array, forEach doesnt.
 // We can chain other functions on each other, map, filter, reduce. but not on forEach
-
-
