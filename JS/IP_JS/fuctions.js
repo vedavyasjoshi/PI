@@ -10,8 +10,8 @@ const f = function innerF(x) {
   console.log(x);
 };
 
-// f(5)
-// innerF(5) // err: innerF is not defined
+f(5);
+innerF(5); // err: innerF is not defined
 
 // First class fn fn can be treated as variables, paased as argument, return value
 const square = function (x) {
@@ -42,8 +42,7 @@ function fun() {
 }
 fun();
 
-function f2(...nums) {
-  // params, rest operator, rest should be the last param
+function f2(...nums) { // params, rest operator, rest should be the last param
   console.log(nums);
 }
 const arr = [5, 6];
@@ -52,6 +51,6 @@ f2(...arr); // arguments, spread operator
 function f3() {
   console.log(arguments); // works in normal functions, but not in arrow fn
 }
-f4(1, 2, 3, 4, 5);
 const f4 = () => console.log(arguments); // err
+f4(1, 2, 3, 4, 5);
 // This in arrow fn refers to global obj
