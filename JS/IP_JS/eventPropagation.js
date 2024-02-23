@@ -25,7 +25,7 @@ div.addEventListener("click", () => {
 form.addEventListener("click", () => console.log("form clicked"));
 button.addEventListener("click", () => console.log("button clicked"));
 form.addEventListener('submit',(e)=>e.preventDefault())
-div, button, form -> since only div had capture, but button & form had bubbling
+// div, button, form -> since only div had capture, but button & form had bubbling
 
 div.addEventListener("click", () => {
     console.log("div clicked")
