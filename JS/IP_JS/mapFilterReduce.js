@@ -29,6 +29,8 @@ console.log(moreThanTwo);
 // Reduce
 // If acc is not initialized, it takes the first value, if arr is empty then err
 Array.prototype.myReduce = function (cb, initialValue) {
+  if (!init && this.length === 0)
+    throw new Error("Invalid fun call, no initial value");
   let acc = initialValue;
   for (let i = 0; i < this.length; i++) {
     acc = acc ? cb(acc, this[i], i, this) : this[i];
